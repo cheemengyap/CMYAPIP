@@ -65,6 +65,16 @@ html[data-lang="zh"] .lang [data-set="zh"],html[data-lang="en"] .lang [data-set=
 .portrait{aspect-ratio:4/5;border:3px solid var(--gold);border-radius:14px;overflow:hidden;background:#222}
 .portrait img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
 
+/* co-advisor card */
+.profiles{display:flex;flex-direction:column;gap:14px}
+.coadv{display:flex;gap:14px;align-items:flex-start;background:#242424;border:1px solid #444;border-left:3px solid var(--gold);border-radius:12px;padding:12px 14px}
+.coadv img{width:72px;height:90px;object-fit:cover;object-position:center 15%;border-radius:8px;border:2px solid var(--gold);flex:none;display:block}
+.coadv .role{font:700 .68rem var(--f-display);letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:2px}
+.coadv h3{font-size:1rem;color:#fff}
+.coadv ul{margin:6px 0 0;padding-left:1.1em;font-size:.8rem;line-height:1.5;color:#d6d1ca}
+.coadv li{margin-bottom:2px}
+.coadv .lic{font-size:.72rem;color:#9a958e;margin:6px 0 0}
+
 /* proof strip */
 .proof{background:var(--wash);border-bottom:1px solid var(--line)}
 .proof .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
@@ -131,6 +141,8 @@ figcaption{font-size:.85rem;color:var(--mute);margin-top:8px}
 .num{font:700 1.6rem var(--f-display);margin:18px 0 20px}
 .chan{display:flex;gap:28px;flex-wrap:wrap;margin-top:28px;font-size:.92rem;color:#cfcac2}
 .chan b{color:var(--gold);font-family:var(--f-display)}
+.chan a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.chan a:hover{color:var(--gold)}
 
 footer{background:#0f0f0f;color:#9a958e;font-size:.8rem;padding:24px 0}
 footer p{max-width:none;margin:0 0 6px}
@@ -138,6 +150,7 @@ footer p{max-width:none;margin:0 0 6px}
 @media (max-width:820px){
   .hero .wrap,.about{grid-template-columns:1fr}
   .portrait{max-width:260px}
+  .profiles{max-width:360px}
   .gates,.svc,.feel{grid-template-columns:1fr}
   .photos{grid-template-columns:1fr 1fr}
   .advisors{grid-template-columns:1fr}
@@ -189,7 +202,21 @@ footer p{max-width:none;margin:0 0 6px}
         <a class="btn ghost" href="#career"><span class="zh">我想创立事业</span><span class="en">Build my own career</span></a>
       </div>
     </div>
-    <div class="portrait"><img src="img/yap-portrait.jpg" alt="叶骐铭 Yap Chee Meng" width="900" height="1125"></div>
+    <div class="profiles">
+      <div class="portrait"><img src="img/yap-portrait.jpg" alt="叶骐铭 Yap Chee Meng" width="900" height="1125"></div>
+      <div class="coadv">
+        <img src="img/teo-bee-yong.jpg" alt="Fion Teo, Co-Advisor" width="600" height="900">
+        <div>
+          <div class="role"><span class="zh">协作顾问</span><span class="en">Co-Advisor</span></div>
+          <h3>Fion Teo</h3>
+          <ul>
+            <li><span class="zh">文件审核与校对</span><span class="en">Document proofing and validation</span></li>
+            <li><span class="zh">更快处理遗嘱、信托与保单申请</span><span class="en">Faster processing of Will, Trust and policy paperwork</span></li>
+            <li><span class="zh">跟进资料齐全度与理赔文件</span><span class="en">Follow-up on completeness and claims documents</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -381,8 +408,9 @@ footer p{max-width:none;margin:0 0 6px}
     </div>
     <div class="chan">
       <div><b><span class="zh">小红书</span><span class="en">Xiaohongshu</span></b> &nbsp;铭叔传家立业</div>
-      <div><b>LinkedIn</b> &nbsp;Yap Chee Meng</div>
-      <div><b>WhatsApp Business</b> &nbsp;CMYAP AIA 012</div>
+      <div><b>LinkedIn</b> &nbsp;<a href="https://www.linkedin.com/in/yourwealthprotectionadvisor/" target="_blank" rel="noopener">Yap Chee Meng</a></div>
+      <div><b>Facebook</b> &nbsp;<a href="https://web.facebook.com/cheemeng.yap" target="_blank" rel="noopener">Yap Chee Meng</a></div>
+      <div><b>WhatsApp Business</b> &nbsp;<a href="https://wa.me/60129818263" target="_blank" rel="noopener">CMYAP AIA 012</a></div>
     </div>
   </div>
 </section>
